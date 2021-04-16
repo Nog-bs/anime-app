@@ -24,3 +24,5 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.primaryColor};
     color: ${({ theme }) => theme.secondaryColor};
 `;
+
+export const Form = styled.form``;
