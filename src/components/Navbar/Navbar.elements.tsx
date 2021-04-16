@@ -13,15 +13,15 @@ export const Head = styled.h2`
     color: ${({ theme }) => theme.primaryColor};
 `;
 
+export const Icon = styled.img`
+    height: 75px;
+    width: 75px;
+`;
+
 export const HeadContainer = styled.div`
     display: flex;
     align-items: center;
     width: 40%;
-`;
-
-export const NavIcon = styled.img`
-    width: 50px;
-    height: 50px;
 `;
 
 export const CheckBoxWrapper = styled.div`

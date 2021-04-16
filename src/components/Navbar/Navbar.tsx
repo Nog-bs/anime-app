@@ -1,3 +1,4 @@
+import React from "react";
 import {
     CheckBox,
     CheckBoxLabel,
@@ -5,16 +6,16 @@ import {
     Container,
     Head,
     HeadContainer,
-    NavIcon,
+    Icon,
 } from "./Navbar.elements";
-import icon from "../../assets/icons/nav-icon.svg";
+import navIcon from "../../assets/icons/nav-icon.svg";
 
 const Navbar = ({ themeToggler }: any) => {
     return (
         <>
             <Container>
                 <HeadContainer>
-                    <NavIcon alt="anime girl icon" src={icon} />
+                    <Icon alt="anime girl icon" src={navIcon} />
                     <Head>Baka List</Head>
                 </HeadContainer>
                 <CheckBoxWrapper>
