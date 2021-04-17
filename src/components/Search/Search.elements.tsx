@@ -5,7 +5,6 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 85vh;
 `;
 
 export const Searchbar = styled.input`
@@ -32,6 +31,7 @@ export const Error = styled.p`
     color: #ff0033;
     font-weight: 700;
     align-self: center;
+    font-size: 0.7rem;
 `;
 
 // DISPLAY CONTENT
@@ -39,6 +39,15 @@ export const SearchDisplay = styled.div`
     margin-top: 42px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
+
+    @media (min-width: 768px) {
+        padding: 0 32px;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 `;
