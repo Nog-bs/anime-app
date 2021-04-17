@@ -5,7 +5,7 @@ export const Container = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 15vh;
 `;
 
 export const Head = styled.h2`
@@ -21,7 +21,6 @@ export const Icon = styled.img`
 export const HeadContainer = styled.div`
     display: flex;
     align-items: center;
-    width: 40%;
 `;
 
 export const CheckBoxWrapper = styled.div`

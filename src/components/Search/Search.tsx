@@ -1,21 +1,30 @@
 import axios from "axios";
 import * as React from "react";
 import { useState } from "react";
-import { Button, Container, Form, Searchbar } from "./Search.elements";
+import { Card } from "../";
+import { mockInfo } from "../Card/mockInfo";
+import { DataProp } from "./DataProp";
+import {
+    Button,
+    Container,
+    Form,
+    Searchbar,
+    SearchDisplay,
+    Error,
+} from "./Search.elements";
 
 const Search: React.FC = () => {
     const [input, setInput] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string>("");
-    const [data, setData] = useState<[]>([]);
+    const [data, setData] = useState<DataProp[]>(mockInfo.results);
 
     const searchData = async (input: string) => {
-        const API_ENDPOINT = `https://api.jikan.moe/v3/search/anime?q=${input}`;
+        const API_ENDPOINT = `https://api.jikan.moe/v3/search/anime?q=${input}&limit=15`;
         const response = await axios
             .get(API_ENDPOINT)
             .then((res) => {
                 setData(res.data.results);
-                console.log(data);
             })
             .catch((err) => {
                 setError(
@@ -49,10 +58,15 @@ const Search: React.FC = () => {
                 <Searchbar
                     onChange={(e) => handleChange(e)}
                     type="name"
-                    placeholder="Search an anime..."
+                    placeholder="search for an anime..."
                 />
             </Form>
-            {error && <p>{error}</p>}
+            <SearchDisplay>
+                {error && <Error>{error}</Error>}
+                {data.map((item: DataProp) => (
+                    <Card key={item.mal_id} {...item} />
+                ))}
+            </SearchDisplay>
         </Container>
     );
 };

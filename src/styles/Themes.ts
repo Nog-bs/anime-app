@@ -5,15 +5,19 @@ declare module "styled-components" {
     export interface DefaultTheme {
         primaryColor: string;
         secondaryColor: string;
+        cardPimary?: string;
+        cardSecondary?: string;
     }
 }
 
 export const lightTheme: DefaultTheme = {
     primaryColor: "#202D36",
-    secondaryColor: "#FAFAFA",
+    secondaryColor: "#FCFBF6",
+    cardPimary: "#ECE9E0",
 };
 
 export const darkTheme: DefaultTheme = {
-    primaryColor: "#FAFAFA",
-    secondaryColor: "#202D36",
+    primaryColor: "#FCFBF6",
+    secondaryColor: "#3B393C",
+    cardPimary: "#69696C",
 };
