@@ -32,6 +32,10 @@ export const Error = styled.p`
     font-weight: 700;
     align-self: center;
     font-size: 0.7rem;
+    
+    @media (min-width: 768px) {
+        margin: 0 auto;
+    }
 `;
 
 // DISPLAY CONTENT

@@ -28,7 +28,7 @@ const Search: React.FC = () => {
             .catch((err) => {
                 setData([]);
                 setError(
-                    "Baka! You either didn't search anything or it does't exist!"
+                    "Baka! You either didn't search anything or it doesn't exist!"
                 );
             });
         return response;
