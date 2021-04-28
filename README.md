@@ -1,6 +1,6 @@
 # Baka List
 
-Summary: MyAnimeList clone that I redesigned the UI. First official TypeScript project.
+Summary: MyAnimeList clone with a redesigned UI. Focussed on the nuances of TypeScript and challenging my styled-components knowledge. First official TypeScript project.
 
 Notable Technologies/Features:
 
